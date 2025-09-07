@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.patientmanager.controller.ConsultationController"
+      spacing="15" alignment="CENTER" stylesheets="@../css/styles.css">
+
+    <Label text="Gestion des Consultations" styleClass="title"/>
+
+    <GridPane hgap="10" vgap="10">
+        <Label text="Nom du patient :" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="patientField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Date :" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <DatePicker fx:id="datePicker" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Médecin :" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="doctorField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Remarques :" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="remarksField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Button text="Ajouter Consultation" fx:id="addButton" onAction="#addConsultation"
+                GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <Label text="Liste des consultations :" styleClass="subtitle"/>
+    <ListView fx:id="consultationListView" prefHeight="200" prefWidth="500"/>
+</VBox>
