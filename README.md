@@ -78,7 +78,7 @@ mvn clean javafx:run
 
 ## Capture d’écran
 
-![Demo](docs/demo.png)
+![Demo](./screen/demo.png)
 
 > Vous pouvez remplacer `docs/demo.png` par la capture d’écran réelle de votre application.
 
